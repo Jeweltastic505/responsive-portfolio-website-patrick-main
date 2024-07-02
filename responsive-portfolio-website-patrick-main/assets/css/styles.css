@@ -372,6 +372,36 @@ svg {
 
 /*=============== SKILLS ===============*/
 
+.skills{
+  background-color: var(--container-color);
+}
+
+.skills__container {
+  padding-bottom: 2rem;
+  row-gap: 3.5rem;
+
+}
+
+.skills__data {
+  text-align: center;
+
+}
+
+.skills_description {
+  margin-bottom: 2rem ;
+
+}
+
+.skills_content , .skills_group {
+  display: grid;
+
+}
+
+.skills_content{
+  grid-template-columns: repeat(2, max-content);
+  
+}
+
 
 /*=============== SERVICES ===============*/
 
