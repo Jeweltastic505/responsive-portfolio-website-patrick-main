@@ -11,7 +11,7 @@
       Change favorite color
       Default: hsl(162, 100%, 40%)
       Orange: hsl(14, 100%, 65%) - Blue: hsl(210, 100%, 70%)
-      Pink: hsl(356, 100%, 75%) - Purple: hsl(250, 100%, 75%)
+      Pink: hsl(356, 100%, 75%) - )Purple: hsl(250, 100%, 75%
 
       For more colors visit: https://colors.dopely.top/color-pedia
       -> Choose any color 
@@ -19,8 +19,8 @@
       -> Copy the color mode (HSL)
   */
 
-  --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
+  --hue: 250;
+  --first-color: hsl(var(--hue), 100%, 75%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
@@ -240,7 +240,24 @@ svg {
 
 
 /* Add blur to header */
+.blur-header {
+  background-color: transparent;
 
+}
+
+.blur-header::after{
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For Safari */ 
+  top: 0; 
+  left: 0;
+  z-index: -1;
+
+}
 
 /* Active link */
 
@@ -281,32 +298,76 @@ svg {
 
 }
 
-.home__descroption{
+.home_description{
   margin-block: 1rem 1.5rem;
 }
 
-.home_social{
+.home__social{
   display: flex;
   justify-content: center;
   column-gap: 1.25rem;
 
 }
 
-.home_social-link{
+.home__social-link{
   display: flex;
   background-color: var(--first-color-alt);
-  padding: 5rem;
+  padding: 0.8rem;
   color: var(--title-color);
   font-size: 1.5rem;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform .4s;
+
 }
 
+.home__social-link:hover{
+  transform: translateY(-0.25rem);
 
+}
+
+.home__image{
+  justify-self: center;
+}
+
+.home__blob{
+  width: 360px;
+  fill: var(--first-color);
+  filter: drop-shadow(0 12px 12px hsla(var(--hue),100%,40%, 0.5));
+
+}
 
 /*=============== BUTTON ===============*/
 
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow 0.4s;
+
+
+}
+
+.button:hover{
+  box-shadow: 0 8px 24px hsla(var(--hue),100%,40%, 0.5);
+}
+
 
 /*=============== ABOUT ===============*/
+.about__container{
+  row-gap: 2.5rem;
+}
+
+.about__data {
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: 2rem;
+}
+
 
 
 /*=============== SKILLS ===============*/
