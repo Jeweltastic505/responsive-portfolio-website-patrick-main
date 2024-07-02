@@ -392,19 +392,91 @@ svg {
 
 }
 
-.skills_content , .skills_group {
+.skills__content , .skills__group {
   display: grid;
 
 }
 
-.skills_content{
-  grid-template-columns: repeat(2, max-content);
-  
+.skills__content{
+  grid-template-columns: repeat(3, max-content);
+  column-gap:  7rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.skills__group {
+  row-gap: 1 rem;
+  list-style:inside;
+}
+
+.skills_item{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.skills_item::marker{
+  color: var(--first-color);
 }
 
 
-/*=============== SERVICES ===============*/
+/*=============== EDUCATION ===============*/
 
+
+.ri-graduation-cap-fill{
+  margin-right: 10px;
+}
+
+.education__description{
+  text-align: center;
+}
+
+.horizontal-line {
+  border: none;
+  height: 2px;
+  background: var(--first-color);
+  margin: 20px 0;
+}
+
+.education {
+  background-color: var(--container-color);
+
+}
+
+/*=============== SERVICES USED ===============*/
+.services{
+  background-color: var(--container-color);
+  padding: 20px;
+}
+
+.services__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust gap between cards as needed */
+}
+
+/* Each service card styling */
+.service__card {
+  background-color: var(--container-color); /* Background color for cards */
+  border: 1px solid var(--first-color); /* Border for cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Internal padding */
+  text-align: center; /* Centered text */
+  flex: 1 10 calc(25% - 20px); /* Adjust width of each card */
+   
+  max-width: calc(25% - 20px); /* Ensures cards don’t exceed container width */
+}
+
+.service__card:hover{
+  cursor: pointer;
+  background-color: var(--first-color);
+  
+  box-shadow: 0 8px 24px hsla(var(--hue),100%,40%, 0.5);
+}
+
+/* Ensure the images are centered within the cards */
+.service__card img {
+  margin-bottom: 10px;
+}
 
 /*=============== PROJECTS ===============*/
 
