@@ -88,10 +88,65 @@ window.addEventListener('scroll',scrollUp)
 const sections = document.querySelectorAll('section[id]')
 
 const scrollActive = () => {
-    
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+                sectionTop = current.offsetTop - 58, 
+                sectionId = current.getAttribute('id'),
+                sectionClass = document.querySelector('nav_menu a[href* = ' + sectionId +' ]')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            sectionClass.classList.add('active-link')
+        }
+        else{
+            sectionClass.classList.remove('active-link')
+        }
+
+    })
 }
 
+window.addEventListener('scroll', scrollActive)
 
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+
+/*====================Pop-up =========================*/
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all buttons that open modals
+    const buttons = document.querySelectorAll('.projects__button');
+
+    // Get all modals
+    const modals = document.querySelectorAll('.modal');
+
+    // Get all elements that close the modals
+    const spans = document.querySelectorAll('.close');
+
+    // When the user clicks the button, open the modal 
+    buttons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const modalId = this.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = "block";
+        });
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    spans.forEach(span => {
+        span.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = "none";
+        });
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+});

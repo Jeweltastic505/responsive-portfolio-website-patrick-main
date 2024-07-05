@@ -25,11 +25,15 @@
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li class="nav__item">
-                     <a href="#home" class="nav__link">Home</a>
+                     <a href="#home" class="nav__link active-link">Home</a>
                   </li>
 
                   <li class="nav__item">
                      <a href="#about" class="nav__link">About</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#education" class="nav__link">Education</a>
                   </li>
 
                   <li class="nav__item">
@@ -159,12 +163,14 @@
          <!--==================== SKILLS ====================-->
          <section class="skills section">
             <div class="skills__container container grid">
-               <div class="skills_data">
-                  <h3 class="section__subtitle">My Skills</h3>
-                  <h2 class="section__title">My Skills</h2>
+               <div class="skills__data">
+                  <h3 class="section__subtitle" style="text-align: left;">
+                     My <span>Skills</span>
+                  </h3>
+                  <h2 class="section__title" style="text-align: left;">My Skills</h2>
 
                   <p class="skills_description">
-                     Below is an overview of the skills I have developed throughout my career journey.
+                     Here is an overview of the skills I have developed throughout my career journey.
                   </p>
 
                   <a href="#project" class="button">See Projects</a>
@@ -197,7 +203,7 @@
                </div>   
                
             </div>
-            <div>
+            
          </section>
 
           <!--==================== Education ====================-->
@@ -301,12 +307,23 @@
             </h2>
             <div class="projects__container container grid">
                <article class="projects__card">
-                  <img src="assets/img/project-img-1.jpg" alt="projects image" class = "projects__img" >
+                  <img src="assets/img/End_of_line.png" alt="projects image" class = "projects__img" >
 
                   <div class="projects__modal">
                      <span class="project__subtitle">Robotics</span>
 
                      <h2 class="project__title">End of Line Robot</h2>
+                     <a href="" class="projects__button" data-modal="modal1" >View Demo <i class="ri-external-link-fill"></i></a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/Lancasters-logos.jpeg" alt="projects image" class = "projects__img" >
+
+                  <div class="projects__modal">
+                     <span class="project__subtitle">Java</span>
+
+                     <h2 class="project__title">Restaurent FOH System </h2>
                      <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
                </article>
@@ -315,44 +332,62 @@
                   <img src="assets/img/project-img-2.jpg" alt="projects image" class = "projects__img" >
 
                   <div class="projects__modal">
-                     <span class="project__subtitle">Data Analysis</span>
-
-                     <h2 class="project__title">Tableau - IMBD Data</h2>
-                     <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
-                  </div>
-               </article>
-
-               <article class="projects__card">
-                  <img src="assets/img/project-img-3.jpg" alt="projects image" class = "projects__img" >
-
-                  <div class="projects__modal">
                      <span class="project__subtitle">Prototyping</span>
 
                      <h2 class="project__title">Delivery App Design</h2>
                      <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i> </a>
                      
                   </div>
+
+                  <div id="modal1" class="modal">
+                     <div class="modal-content">
+                         <span class="close" data-modal="modal2">&times;</span>
+
+                         <div class="project__container container grid">
+                           <h2 style="color: black; margin-top: 50px;">Robotics - End of Line</h2>
+                           
+                           <h3 class="tasks" style="font-weight: bold; color: black;">
+                              Project Description
+                           </h3>
+                           <p class="robotics__description">
+                              The aim of the Project was
+                           </p>
+                         </div>
+                         
+                 </div>
+
                </article>
 
 
                <article class="projects__card">
-                  <img src="assets/img/project-img-4.jpg" alt="projects image" class = "projects__img" >
+                  <img src="assets/img/experian.png" alt="projects image" class = "projects__img" >
 
                   <div class="projects__modal">
-                     <span class="project__subtitle">Data Analysis</span>
+                     <span class="project__subtitle">Data Analysis - Experian</span>
 
-                     <h2 class="project__title">Experian - Covid 19 Analysis</h2>
+                     <h2 class="project__title">Covid 19 Analysis</h2>
                      <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
                </article>
 
                <article class="projects__card">
-                  <img src="assets/img/project-img-5.jpg" alt="projects image" class = "projects__img" >
+                  <img src="assets/img/Java Game Level 1.png" alt="projects image" class = "projects__img" >
 
                   <div class="projects__modal">
                      <span class="project__subtitle">Java</span>
 
                      <h2 class="project__title">Pirate Themed Game</h2>
+                     <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/project-img-6.jpg" alt="projects image" class = "projects__img" >
+
+                  <div class="projects__modal">
+                     <span class="project__subtitle">Tableau - Data Analysis</span>
+
+                     <h2 class="project__title">IMBD Data Analysis</h2>
                      <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
                </article>
