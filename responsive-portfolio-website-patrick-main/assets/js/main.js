@@ -54,7 +54,7 @@ const sendEmail = (e) => {
     e.preventDefault()
 
     // serviceID - templateID - #form - publicKey
-    emailjs.sendForm('service_cdv07z9','template_8jjblub','#contact-form','2V6M2qCs5vQAyv7xY')
+    emailjs.sendForm('service_ffvbvvk','template_6juy244','#contact-form','7913Jsp4Mjpz0SpdK')
         .then(() => {
             //Show sent Message
             contactMessage.textContent = 'Message sent sucessfully! '
@@ -111,7 +111,18 @@ window.addEventListener('scroll', scrollActive)
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin:'top',
+    distance: '60px',
+    duration: 2500,
+    delay:400,
+    reset: true  
+})
 
+sr.reveal('.contact__container')
+sr.reveal(' .skills__data, .award__row ', {origin: 'left'})
+sr.reveal('.about__image, .skills__content, .about__data, .education__content' , {origin: 'right'})
+sr.reveal('.service__card, .projects__card, .timeline-item', { interval:100})
 
 /*====================Pop-up =========================*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -150,3 +161,76 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// JavaScript to trigger animation after page load
+document.addEventListener('DOMContentLoaded', function() {
+    animateWords();
+});
+
+function animateWords() {
+    const container = document.querySelector('.animation-container');
+    const text = container.textContent.trim();
+    const words = text.split(' ');
+
+    container.textContent = ''; // Clear the container
+
+    words.forEach(word => {
+        const span = document.createElement('span');
+        span.textContent = word + ' ';
+        span.style.opacity = 0; // Start each word with opacity 0
+        container.appendChild(span);
+
+        // Delay each word's appearance using setTimeout
+        setTimeout(() => {
+            span.style.opacity = 1;
+        }, 200 * words.indexOf(word)); // Adjust the delay time as needed
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const rotatingTextElement = document.getElementById('rotatingText');
+    const texts = [
+      "Computer Science with Cyber Security Student",
+      "Aspiring Cyber Security Ethusiast",
+      "Robotics Enthusiast",
+      "CEO and Co-Founder of Chemasterpiece",
+      "Software Developer",
+      "Vice President of IEEE City Robotics Society"
+    ];
+  
+    let textIndex = 0;
+    let charIndex = 0;
+    let currentText = '';
+    let isDeleting = false;
+  
+    function type() {
+      rotatingTextElement.textContent = currentText;
+  
+      if (!isDeleting && charIndex < texts[textIndex].length) {
+        // Add a new character to the current text
+        currentText += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        // Adjust typing speed for faster animation
+        setTimeout(type, 100); // Typing speed set to 100ms
+      } else if (isDeleting && charIndex > 0) {
+        // Remove the last character from the current text
+        currentText = currentText.slice(0, -1);
+        charIndex--;
+        // Adjust deleting speed for faster animation
+        setTimeout(type, 50); // Deleting speed set to 50ms
+      } else if (!isDeleting && charIndex === texts[textIndex].length) {
+        // Start deleting after the text is fully typed
+        isDeleting = true;
+        setTimeout(type, 2000); // Pause before deleting, set to 2000ms
+      } else if (isDeleting && charIndex === 0) {
+        // Move to the next text after deleting all characters
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, 500); // Delay before typing next text, set to 500ms
+      }
+    }
+  
+    type(); // Start typing animation
+  });
+  
+  
