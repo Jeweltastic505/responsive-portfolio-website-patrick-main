@@ -25,7 +25,7 @@
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
   --body-color: hsl(228, 15%, 20%);
-  --container-color: hsl(228, 15%, 15%);
+  --container-color: hsl(0, 0%, 1%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -273,6 +273,19 @@ svg {
 
 }
 
+.home__education {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
+}
 .home__container{
   padding-top: 2rem ;
   row-gap: 2.5rem;
@@ -356,10 +369,79 @@ svg {
   box-shadow: 0 8px 24px hsla(var(--hue),100%,40%, 0.5);
 }
 
+/*=========aWARds====================*/
+
+.awards{
+  background-color: var(--container-color);
+}
+
+
+
+/* Awards Container */
+.awards__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.award__row {
+  display: flex;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Award Item */
+.award_item {
+  background-color: var(--container-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  flex: 1;
+}
+
+.award_item::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background-color: #ddd;
+}
+
+.award_item:last-child::after {
+  display: none;
+}
+
+
+
+.award_name {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.award_name i {
+  font-size: 3rem; /* Larger icon size */
+  color: var(--first-color);
+  margin-right: 10px;
+}
 
 /*=============== ABOUT ===============*/
 .about__container{
   row-gap: 2.5rem;
+  background-color: var(--container-color);
+}
+
+.about{
+  background-color: var(--container-color);
 }
 
 .about__data {
@@ -422,7 +504,9 @@ svg {
 
 
 /*=============== EDUCATION ===============*/
-
+.education{
+  background-color: var(--container-color);
+}
 
 .ri-graduation-cap-fill{
   margin-right: 10px;
@@ -556,7 +640,9 @@ svg {
 }
 
 /*=============== CONTACT ===============*/
-
+.contact{
+  background-color: var(--container-color);
+}
 .contact__container{
   padding-top: 1rem;
 
@@ -574,12 +660,12 @@ svg {
 .contact__input{
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
-  background-color: var(--container-color);
-  color: var(--title-color);
+  background-color: white;
+  color: black;
 }
 
 .contact__input{
-  color: var(--text-color);
+  color: black;
 }
 
 .contact__form textarea{
@@ -609,6 +695,7 @@ svg {
 .footer{
   background:var(--container-color);
   padding-block: 3.5rem 2rem;
+  border-top: 4px solid var(--first-color);
 
 }
 
@@ -699,6 +786,21 @@ svg {
 .show-scroll{
   bottom: 3rem;
 
+}
+
+.animation-container {
+  opacity: 0; /* Start with opacity 0 to hide text initially */
+  animation: appearText 1s forwards; /* Apply animation */
+}
+
+/* Define keyframes for the animation */
+@keyframes appearText {
+  from {
+      opacity: 0; /* Start from opacity 0 */
+  }
+  to {
+      opacity: 1; /* End with opacity 1 */
+  }
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -805,6 +907,12 @@ svg {
 
   }
 
+  
+
+  .home__data{
+    text-align: left;
+  }
+
   .home__container{
     grid-template-columns: 455px 550px;
     column-gap: 7rem;
@@ -819,10 +927,12 @@ svg {
 
   .home__content{
     row-gap: 4.5rem;
+  
   }
   
   .home__description{
     margin-block: 1.5rem 2.5rem;
+    justify-content: left;
 
   }
 
@@ -911,28 +1021,61 @@ svg {
     height: 20rem;
   }
 
-  .footer{
+  .footer {
     padding-block: 4.5rem 4rem;
-  }
+    background-color:  var(--container-color);
+    border-top: 4px solid var(--first-color);
+    
+}
 
-  .footer__container{
+.footer__container {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    text-align: initial;
-  }
+    align-items: start;
+    text-align: left;
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 1rem; /* Add some padding for spacing */
+    gap: 20px; /* Add gap between columns */
+}
 
-  .footer__title{
+.footer__title {
     font-size: var(--bigger-font-size);
-  }
+    margin-bottom: 0.5rem; /* Ensure some spacing below the title */
+}
 
-  .footer__social{
-    column-gap: 1.5rem;
-  }
+.footer__education {
+    font-size: 1rem;
+    margin-bottom: 2rem; /* Ensure some spacing below the education text */
+}
 
-  .footer__copy{
+.footer__social {
+    display: flex;
+    justify-content: flex-start; /* Align social icons to the left */
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+.footer__copy {
     margin: 0;
-    justify-self: flex-end;
-  }
+    text-align: left; /* Align text to the left */
+    font-size: 0.875rem; /* Make the copyright text slightly smaller */
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__social-column {
+    align-items: flex-start; /* Ensure social icons column aligns items to start */
+}
+
+
+}
+
 
   /*=============Modal Styling =============*/
   .modal {
@@ -1000,4 +1143,116 @@ svg {
 
 }
 
+.video-container {
+  width: 100%; 
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+
+/*==============Timeline=========== */
+
+
+.experience{
+  background-color: var(--container-color);
+}
+.timeline-items{
+
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+}
+
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: var(--first-color);
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.timeline-item{
+  margin-bottom: 40px ;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 10px;
+
+}
+
+.timeline-item{
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(2) {
+  padding-right: 0;
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-dot{
+  height: 21px;
+  width: 21px;
+  background-color: var(--first-color);
+  box-shadow: 0 0 25px var(--first-color), 0 0 50px var(--first-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.timeline-dot{
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  margin: 6px 0 15px;
+
+}
+
+.timeline-content{
+  background-color: var(--container-color);
+  border: 3px solid var(--first-color);
+  padding: 30px 50px;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px var(--first-color);
+  cursor: pointer;
+  transition: 0.3s ease-in-out ;
+}
+
+.timeline-content:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--first-color);
+}
+
+.timeline-content h3{
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+  
+}
+
+.timeline-content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.scrollup{
+  right: 3rem;
+  
 }
