@@ -33,11 +33,19 @@
                   </li>
 
                   <li class="nav__item">
+                     <a href="#skills" class="nav__link">Skills</a>
+                  </li>
+
+                  <li class="nav__item">
                      <a href="#education" class="nav__link">Education</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#services" class="nav__link">Services</a>
+                     <a href="#services" class="nav__link">Products</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#experience" class="nav__link">Experience</a>
                   </li>
 
                   <li class="nav__item">
@@ -71,13 +79,13 @@
                   <div class="home__data">
                      <h3 class="home__subtitle"> Hello, <span>I’m</span></h3>
                     <h1 class="home__title">Bansari Sanghvi</h1>
-                    <h3 class="home_education">2nd Year MSci Computer Science with Cyber Security Student</h3>
+                    <h3 class="home_education" id="rotatingText">2nd Year MSci Computer Science with Cyber Security Student</h3>
 
                     <p class="home_description">A highly motivated and professional student with a wide range of experiences in a range of different areas such as Robotics, Cloud Security and Software Development.
                       
                      </p>
 
-                     <a href="contact" class="button">Let's connect!</a>
+                     <a href="#contact" class="button" id="connect">Let's connect!</a>
                   </div>
 
                   <!--Social Contact Links-->
@@ -85,12 +93,10 @@
                      <a href="https://github.com/Jeweltastic505" target="_blank" class="home__social-link">
                         <i class="ri-github-fill"></i>
                      </a>
-                     <a href="www.linkedin.com/in/bansari-sanghvi-07b686200" target="_blank" class="home__social-link">
+                     <a href="https://www.linkedin.com/in/bansari-sanghvi-07b686200/" target="_blank" class="home__social-link">
                         <i class="ri-linkedin-box-fill"></i>
                      </a>
-                     <a href="" target="_blank" class="home__social-link">
-                        <i class="ri-mail-fill"></i>
-                     </a>
+                     
                   </div>
                </div>
 
@@ -207,9 +213,9 @@
          </section>
 
           <!--==================== Education ====================-->
-    <section class="Education section" id="education">
-      <div class="education__container container grid">
-          <div class="education__data">
+    <section class="Education section" id="education" style="background-color: var(--container-color);">
+      <div class="education__container container grid" >
+          <div class="education__data"   >
               <h2 class="section__title">
                   <i class="ri-graduation-cap-fill"></i> My Education
               </h2>
@@ -246,6 +252,8 @@
           </div>
       </div>
   </section>
+
+  
 
   <!--=============TECHNOLOGIES I HAVE WORKED WITH========-->
   <section class="services section" id="services">
@@ -295,6 +303,46 @@
       </div>
   </section>
 
+  <!--====================EXPERIENCE=========================-->
+  <section class="experience section" id="experience">
+   <h3 class="section__subtitle">
+      My <span>Experience</span>
+   </h3>
+   <h2 class="section__title">
+      Experience Timeline
+   </h2>
+
+   <div class="timeline-items">
+      <div class="timeline-item">
+         <div class="timeline-dot"></div>
+         <div class="timeline-data" style="font-weight: bold; color: white; margin-bottom: 1rem; margin-top: 1rem;">Aug 2023 - Present</div>
+         <div class="timeline-content">
+            <h3><b>Vice President, IEEE City Robotics Society</b></h3>
+            <p>Within this role, I was responsible for event management, adminstration and teaching code </p>
+         </div>
+      </div>
+
+      <div class="timeline-item">
+         <div class="timeline-dot"></div>
+         <div class="timeline-data" style="font-weight: bold; color: white; margin-bottom: 1rem;  margin-top: 1rem;">June 2023 - Present</div>
+         <div class="timeline-content">
+            <h3><b>CEO and Co-Founder, Chemasterpiece</b></h3>
+            <p>I developed and built an educational website for A-level Chemistry students following the OCR B Chemistry exam board.</p>
+         </div>
+      </div>
+
+      <div class="timeline-item">
+         <div class="timeline-dot"></div>
+         <div class="timeline-data" style="font-weight: bold; color: white; margin-bottom: 1rem;  margin-top: 1rem;">June 2023 - October 2023</div>
+         <div class="timeline-content">
+            <h3><b>Software Development Intern, Welwin Infotech Limited UK</b></h3>
+            <p>Worked on web-based projects related to travel and chemical industry.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+
 
          <!--==================== PROJECTS ====================-->
          <section class="projects section" id="projects">
@@ -319,7 +367,7 @@
                   <!--Associated Modal Class for End of Line Project-->
                   <div id="modal1" class="modal">
                      <div class="modal-content">
-                         <span class="close" data-modal="modal2">&times;</span>
+                         <span class="close" data-modal="modal1">&times;</span>
 
                          <div class="project__container container grid">
                            <h2 style="color: black; margin-top: 50px; font-weight: bold;">IEEE City Robotics Society - End of Line 2023</h2>
@@ -361,14 +409,55 @@
                </article>
 
                <article class="projects__card">
-                  <img src="assets/img/Lancasters-logos.jpeg" alt="projects image" class = "projects__img" >
+                  <img src="assets/img/28 (2).png" alt="projects image" class = "projects__img" >
 
                   <div class="projects__modal">
-                     <span class="project__subtitle">Java</span>
+                     <span class="project__subtitle">WordPress</span>
 
-                     <h2 class="project__title">Restaurent FOH System </h2>
-                     <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
+                     <h2 class="project__title">WordPress Website </h2>
+                     <a href="" class="projects__button" data-modal="modal2">View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
+
+                  <!--Associated Modal Class for WordPress Project-->
+                  <div id="modal2" class="modal">
+                     <div class="modal-content">
+                         <span class="close" data-modal="modal2">&times;</span>
+
+                         <div class="project__container container grid">
+                           <h2 style="color: black; margin-top: 50px; font-weight: bold;">CuOL Student Branch - WordPress Website</h2>
+                           
+                           <h3 class="tasks" style="font-weight: bold; color: black;">
+                              Project Description:
+                           </h3>
+                           <p class="robotics__description">
+                              As part of the relaunch of the IEEE Student Branch at City University of London, I took on this 
+                              project to relaunch their website with a fresh new concept. 
+                           </p>
+
+                           <h3 class="tasks" style="font-weight: bold; color: black;">My Tasks:</h3>
+                           
+                           <p class="tasks_description">
+                              For this project I developed a WordPress website for the City UOL Student Branch of IEEE to enhance the organization, management, and efficiency of resources for competitions, conferences, and workshops. 
+                              This improved resource management by 50% and has become the primary contact point for the organization.
+                              I ensured to adhered to branding guidelines, ensuring the correct use of color schemes, logos, and form specifications. Furthermore, I used Integrated various plugins, including WP-Forms for workshop registration and WP Carousel for partner highlights, to enhance website functionality
+                              
+                           </p>
+
+                           <a href="https://cityrobotics.co.uk/" target="_blank">Link to City Robotics Website</a>
+
+                           
+                           <div class="skills__learning_row">
+                              <div class="skill_box">WordPress</div>
+                              <div class="skill_box">Web Development</div>
+                              <div class="skill_box">Time Management</div>
+                              <div class="skill_box">UI/UX Design</div>
+
+                           </div>
+                         </div>
+                         
+                 </div>
+                 </div>
+
                </article>
 
                <article class="projects__card">
@@ -385,7 +474,7 @@
                   <!--Associated Modal Class for Delivery App Project-->
                   <div id="modal3" class="modal">
                      <div class="modal-content">
-                         <span class="close" data-modal="modal2">&times;</span>
+                         <span class="close" data-modal="modal3">&times;</span>
 
                          <div class="project__container container grid">
                            <h2 style="color: black; margin-top: 50px; font-weight: bold;">Delivery App Design</h2>
@@ -422,10 +511,6 @@
                  </div>
                  </div>
 
-
-
-
-
                </article>
 
 
@@ -436,8 +521,49 @@
                      <span class="project__subtitle">Data Analysis - Experian</span>
 
                      <h2 class="project__title">Covid 19 Analysis</h2>
-                     <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
+                     <a href="" class="projects__button" data-modal="modal4">View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
+
+                  <div id="modal4" class="modal">
+                     <div class="modal-content">
+                         <span class="close" data-modal="modal4">&times;</span>
+
+                         <div class="project__container container grid">
+                           <h2 style="color: black; margin-top: 50px; font-weight: bold;">Experian - Covid 19 Analysis</h2>
+                           
+                           <h3 class="tasks" style="font-weight: bold; color: black;">
+                              Project Description:
+                           </h3>
+                           <p class="robotics__description">
+                              The primary focus of this project was to do data cleaning and analysis of the dataset which contained information about Covid 19 rates around the UK.
+                              Using this information, I had to provide recommendations based on area on infrastructure that needed to be provided by the Goverment.
+                           </p>
+
+                           <h3 class="tasks" style="font-weight: bold; color: black;">My Tasks:</h3>
+                           
+                           <p class="tasks_description">
+                              Withi this analysis, I learnt how to efficently use Excel with large amounts of data and make
+                              recommendations. I was selected as 1st out of 300 people for my research and had the 
+                              opportunity to present to the CTO of Experian. 
+                           </p>
+
+                           <h3 class="tasks" style="font-weight: bold; color: black;">My Research Report:</h3>
+                           <div class="pdf-container">
+                              <iframe src="assets/pdf/Experian_Data.pdf" width="100%" height="500px"></iframe>
+                          </div>
+                           
+                           <div class="skills__learning_row">
+                              <div class="skill_box">Data Analysis</div>
+                              <div class="skill_box">Data Cleaning</div>
+                              <div class="skill_box">Time Management</div>
+                              <div class="skill_box">Communication</div>
+
+                           </div>                  
+                         </div>
+                         
+                 </div>
+                 </div>
+
                </article>
 
                <article class="projects__card">
@@ -447,8 +573,55 @@
                      <span class="project__subtitle">Java</span>
 
                      <h2 class="project__title">Pirate Themed Game</h2>
-                     <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
+                     <a href="" class="projects__button" data-modal="modal5" >View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
+
+
+                  <div id="modal5" class="modal">
+                     <div class="modal-content">
+                         <span class="close" data-modal="modal5">&times;</span>
+
+                         <div class="project__container container grid">
+                           <h2 style="color: black; margin-top: 50px; font-weight: bold;">Java - Pirate Themed Game</h2>
+                           
+                           <h3 class="tasks" style="font-weight: bold; color: black;">
+                              Project Description:
+                           </h3>
+                           <p class="robotics__description">
+                              The primary focus of this project was to build a Java Game using the City Engine based on a selected theme.
+                           </p>
+
+                           <h3 class="tasks" style="font-weight: bold; color: black;">My Tasks:</h3>
+                           
+                           <p class="tasks_description">
+                              I developed an interactive pirate-themed game using Java,
+                              IntelliJ, and the City Server. This captivating game spans
+                              four unique levels, each symbolizing the elemental forces of fire, water, air, and
+                              earth. Within these levels, players encounter a diverse range of challenges,
+                              featuring unique objects, power-ups, enemy characters and obstacles that demand
+                              navigation within specified time limits.
+                           </p>
+
+                           <p class="tasks_description">
+                              In elevating the gaming experience, I've integrated a user-friendly Graphical User Interface (GUI) toolbar and a login page. This intuitive toolbar not only streamlines the level selection process but also empowers players to fine-tune sound settings and access an instruction manual for guidance. Additionally, upon launching the game, the login page enables users to personalize their experience by adding their names and facilitates progress saving, contributing to a more personalized and engaging gameplay. Furthermore, I have carefully selected music and sound effects for the theme of each level to enhance the overall ambiance, creating a polished and professional finish to the gaming experience.
+                           </p>
+
+                           
+                           
+                           <div class="skills__learning_row">
+                              <div class="skill_box">Data Analysis</div>
+                              <div class="skill_box">Data Cleaning</div>
+                              <div class="skill_box">Time Management</div>
+                              <div class="skill_box">Communication</div>
+
+                           </div>
+
+                                                     
+                         </div>
+                         
+                 </div>
+                 </div>
+
                </article>
 
                <article class="projects__card">
@@ -458,12 +631,79 @@
                      <span class="project__subtitle">Tableau - Data Analysis</span>
 
                      <h2 class="project__title">IMBD Data Analysis</h2>
-                     <a href="" class="projects__button">View Demo <i class="ri-external-link-fill"></i></a>
+                     <a href="" class="projects__button" data-modal="modal6">View Demo <i class="ri-external-link-fill"></i></a>
                   </div>
+
+                  <div id="modal6" class="modal">
+                     <div class="modal-content">
+                         <span class="close" data-modal="modal6">&times;</span>
+
+                         <div class="project__container container grid">
+                           <h2 style="color: black; margin-top: 50px; font-weight: bold;">Tableau - IMBD Data Analysis</h2>
+                           
+                           <h3 class="tasks" style="font-weight: bold; color: black;">
+                              Project Description:
+                           </h3>
+                           <p class="robotics__description">
+                              The primary focus of this project was to analyse the datasets provided
+                              to highlight the trends in the Industry and create interactive dashboards using Tableau.
+                           </p>
+
+                           <h3 class="tasks" style="font-weight: bold; color: black;">My Tasks:</h3>
+                           
+                           <p class="tasks_description">
+                              During my analysis, I created 3 interactive dashboards using Tableau to visulise the different trends within the dataset. 
+                           
+
+                           <!--Video Container-->
+
+                                                
+                           <div class="skills__learning_row">
+                              <div class="skill_box">Data Analysis</div>
+                              <div class="skill_box">Data Cleaning</div>
+                              <div class="skill_box">Tableau</div>
+                              <div class="skill_box">Visualisation</div>
+
+                           </div>
+
+                                                     
+                         </div>
+                         
+                 </div>
+                 </div>
+
                </article>
                
             </div>
 
+         </section>
+
+
+         <!--====================AWARDS=======================-->
+         <section class="awards section" id="award">
+            <h3 class="section__subtitle">
+               My <span>Awards</span>
+            </h3>
+
+            <h2 class="section__title">Achievements</h2>
+
+            <div class="awards__container container grid">
+               <div class="award__row">
+
+                  <div class="award_item">
+                     <h2 class="award_name"><i class="ri-trophy-line"></i> Carrot Silver Award  2024</h2>
+                  </div>
+
+                  <div class="award_item">
+                     <h2 class="award_name"><i class="ri-trophy-line"></i> Best Commitee Member of the Year</h2>
+                  </div>
+
+                  <div class="award_item">
+                     <h2 class="award_name"><i class="ri-trophy-line"></i> Cambridge Chemistry Challange: Copper Award</h2>
+                  </div>
+
+               </div>
+            </div>
          </section>
 
          <!--==================== CONTACT ====================-->
@@ -496,34 +736,43 @@
       <!--==================== FOOTER ====================-->
       <footer class="footer">
          <div class="footer__container container grid">
-            <h1 class="footer__title">
-               Bansari<span> Sanghvi</span>
-            </h1>
-
-            <h2 class="footer__education">
-               2nd Year MSci Computer Science Student
-            </h2>
+             <div class="footer__column">
+                 <h1 class="footer__title">
+                     Bansari<span> Sanghvi</span>
+                 </h1>
+                 <h2 class="footer__education">
+                     2nd Year MSci Computer Science Student
+                 </h2>
+             </div>
          
-         <div class="footer__social">
-            <a href="" target="_blank" class="footer__social-link">
-               <i class="ri-linkedin-fill"></i>
-            </a>
+     
+             <div class="footer__column footer__social-column">
+                 <div class="footer__social" style="align-items: center;">
+                     <a href="" target="_blank" class="footer__social-link">
+                         <i class="ri-linkedin-fill"></i>
+                     </a>
+     
+                     <a href="" target="_blank" class="footer__social-link">
+                         <i class="ri-linkedin-fill"></i>
+                     </a>
+     
+                     <a href="" target="_blank" class="footer__social-link">
+                         <i class="ri-linkedin-fill"></i>
+                     </a>
+                 </div>
+               </div>
+                 
+     
+            <div class="footer__column">
+                  <span class="footer__copy">
+                      &#169; Copyright Bedimcode. All rights reserved
+                  </span>
+            </div>
 
-            <a href="" target="_blank" class="footer__social-link">
-               <i class="ri-linkedin-fill"></i>
-            </a>
-
-            <a href="" target="_blank" class="footer__social-link">
-               <i class="ri-linkedin-fill"></i>
-            </a>
+             
          </div>
-
-         <span class="footer__copy">
-            &#169; Copyright Bedimcode. All rights reserved
-         </span>
-
-      </div>
-      </footer>
+     </footer>
+     
 
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
@@ -531,7 +780,7 @@
       </a>
 
       <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
+      <script src="assets/js/scrollreveal.min.js"></script>
 
       <!--=============== EMAIL JS ===============-->
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
